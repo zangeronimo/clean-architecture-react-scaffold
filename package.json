@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests ./src/test",
+    "test:ci": "yarn test --coverage",
     "prepare": "husky"
   },
   "devDependencies": {
